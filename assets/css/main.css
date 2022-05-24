@@ -314,7 +314,7 @@ nav.move #toggle-icon {
     }
 
     .btn-group-vertical {
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     .navbar-brand {
@@ -329,7 +329,7 @@ nav.move #toggle-icon {
 
     #hero-section {
         --opacity-bg: 0.1;
-        background-image: linear-gradient(rgba(0, 0, 0, var(--opacity-bg)), rgba(0, 0, 0, var(--opacity-bg))), url("../img/gif/01.gif");
+        background-image: linear-gradient(rgba(0, 0, 0, var(--opacity-bg)), rgba(0, 0, 0, var(--opacity-bg))), url("../img/gif/02.gif");
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-attachment: fixed;
