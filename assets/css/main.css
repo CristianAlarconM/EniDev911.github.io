@@ -11,17 +11,11 @@
     src: url(../fonts/VictorMono-Bold.ttf);
 }
 
-@font-face {
-    font-family: Scope One;
-    src: url(../fonts/ScopeOne-Regular.ttf);
-}
-
 /* ===== color palette  global =========== */
 :root {
     --main-bg-color: hsl(0, 0%, 90%);
     --primary-color: #EF5350;
     --text-color: hsla(300, 4%, 5%, 0.802);
-    --font-normal: "Scope One";
     --font-code: "Cascadia Code";
     --font-code-victor: "Victor Mono";
     --card-bg-color: hsl(0, 0%, 90%);
@@ -31,7 +25,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: var(--font-normal);
+    font-family: var(--font-code-victor);
     background-color: var(--main-bg-color);
     color: var(--text-color);
     transition: .3s ease all;
@@ -61,7 +55,9 @@ body.dark .nav-link {
 body.dark div.card {
     border-bottom: 2px solid var(--primary-color);
     color: var(--text-color) !important;
-    transition: transform ease-in-out .3s;
+    transition-property: transform, box-shadow;
+    transition-duration: .3s, .5s;
+    transition-timing-function: ease-in-out, ease-out;
 }
 
 body.dark div.card:hover {
@@ -69,6 +65,7 @@ body.dark div.card:hover {
     background: #373a3c !important;
     color: var(--primary-color) !important;
     border: 1.2px solid var(--primary-color) !important;
+    box-shadow: 3px 5px 13px var(--primary-color) !important;
 }
 
 body.dark .card-footer a:hover {
@@ -80,9 +77,12 @@ body.dark .card-footer a:hover {
 
 body.dark section .container,
 body.dark section #about .row:nth-child(1) {
-    border-bottom: 2px solid var(--primary-color);
     color: var(--text-color) !important;
     background: var(--card-bg-color) !important;
+}
+
+body.dark .accordion-item button {
+    background: var(--card-bg-color);
 }
 
 .card {
@@ -99,7 +99,6 @@ body.dark section #about .row:nth-child(1) {
 
 /* Nav */
 
-
 nav.move {
     font-family: var(--font-code-victor);
     text-transform: uppercase;
@@ -107,7 +106,7 @@ nav.move {
 }
 
 nav.move #toggle-icon {
-    filter: invert(100%) !important;
+    transform: scale(2) !important;
 }
 
 
@@ -127,7 +126,8 @@ nav.move #toggle-icon {
 
 .toggle-theme__icon {
     margin-right: 0.5rem;
-    width: 20px;
+    width: 25px;
+    transition: transform .2s ease-in;
 }
 
 .toggle-theme__text {
@@ -273,9 +273,8 @@ nav.move #toggle-icon {
 }
 
 .accordion-header button {
-    background-color: var(--primary-color);
+    background: #cca;
 }
-
 
 /* Skills and software */
 
@@ -305,6 +304,7 @@ nav.move #toggle-icon {
 
 /* media querie */
 @media only screen and (max-width: 680px) {
+
     body {
         background-color: var(--main-bg-color);
     }
@@ -317,6 +317,16 @@ nav.move #toggle-icon {
         visibility: hidden;
     }
 
+    .navbar-brand {
+        display: none;
+        visibility: hidden;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url(../img/logo_sin_bg.png) !important;
+
+    }
+
     #hero-section {
         --opacity-bg: 0.1;
         background-image: linear-gradient(rgba(0, 0, 0, var(--opacity-bg)), rgba(0, 0, 0, var(--opacity-bg))), url("../img/gif/01.gif");
@@ -327,5 +337,17 @@ nav.move #toggle-icon {
         min-height: 100vh;
         background-position: center center;
         border-bottom: 2px solid #fa0;
+    }
+
+    /* About */
+    .coding-typed {
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+
+    .coding {
+        font-family: monospace;
+        font-weight: normal;
+        font-size: 1rem;
     }
 }

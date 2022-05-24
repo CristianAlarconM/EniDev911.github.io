@@ -4,4 +4,4 @@
 
 - [Luis Sanchez Díaz]()
 
-- [Cristian Faúndez]()
+- [Cristian Faúndez](https://github.com/EniDev911/ElCriSN-portfolio/commit/fb6c7167ba24a5b8a4be8f738958b6b1d9286102)

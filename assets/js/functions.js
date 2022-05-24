@@ -15,7 +15,7 @@ toggleTheme.addEventListener('click', () => {
 
     if (toggleIcon.src.includes('moon.svg')) {
         toggleIcon.src = "assets/img/logo/sun.svg";
-        toggleText.textContent = "Light Mode";
+        toggleText.textContent = "Light Side";
         toggleTheme.classList.add('bg-warning', 'text-dark');
         toggleTheme.classList.add('bg-warning', 'text-dark');
     } else {
@@ -66,10 +66,16 @@ function showMessage(title, image, message) {
     })
 }
 function showAvatar() {
+    let background = "#373a3c";
+    if (toggleIcon.src.includes("moon.svg")) {
+        background = "";
+        color = "";
+    }
     Swal.fire({
         title: "<h2 class='text-center'><code class='fs-1 text-center' style='color: #f50;'><i class='fas fa-user-secret fs-1'></i> {EniDev911}</code></h2>",
         imageUrl: relativePathImage + "logo/logo_con_bg.png",
         imageWidth: "200px",
+        background: background,
         showConfirmButton: false,
         showCloseButton: true,
         closeButtonHtml: "<i class='fas fa-times'></i>",
