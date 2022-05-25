@@ -95,7 +95,7 @@ function showContactForm() {
     })
 }
 
-function playSound(filename = relativePathMedia + "lofi-beat-chill") {
+function playSound(filename = "lofi-beat-chill") {
     /**
       * Plays a sound using the HTML5.
       * @param {string} filename The name of the file.!
