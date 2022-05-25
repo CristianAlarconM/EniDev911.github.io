@@ -23,7 +23,7 @@
       <a class="navbar-brand m-0 p-0" href="#">
         <img src="assets/img/logo_sin_bg.png" class="img-fluid" style="height:3.3rem;" onclick="showAvatar();">
       </a>
-      <div class="switches">
+      <div class="switches" onclick="playSound('lightsaber')">
         <div id="toggle-theme" class="toggle-theme badge bg-secondary">
           <img id="toggle-icon" src="assets/img/logo/moon.svg" alt="icon theme" class="toggle-theme__icon">
           <p id="toggle-text" class="toggle-theme__text">DARK SIDE</p>
@@ -417,7 +417,7 @@
     <div class="container-sm">
       <div class="row">
         <!-- Vs-Code -->
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-3">
           <div class=" w-50 flex-shrink-1 flex-grow-1 mb-5 text-center mx-auto">
             <img src="assets/img/software/visual-studio-code.png" alt="css3" class="img-fluid w-75 logo"
               data-bs-toggle="tooltip" data-bs-placement="bottom" title="VISUAL STUDIO CODE"
@@ -426,7 +426,7 @@
           </div>
         </div>
         <!-- Git -->
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-3">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/git.png" alt="git" class="img-fluid w-75 logo" data-bs-toggle="tooltip"
               data-bs-placement="bottom" title="Git"
@@ -435,7 +435,7 @@
           </div>
         </div>
         <!-- Windows Terminal -->
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-3">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/windows-terminal.png" alt="git" class="img-fluid w-75 logo"
               data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Terminal"
@@ -444,7 +444,7 @@
           </div>
         </div>
         <!-- WSL Windows Subsystem For Linux -->
-        <div class="col-6 col-md-4 col-lg-3">
+        <div class="col-4 col-sm-4 col-md-4 col-lg-3 mx-auto">
           <div class="w-50 flex-shrink-1 flex-grow-1 mb-5 mx-auto">
             <img src="assets/img/software/windows-subsystem-for-linux.png" alt="git" class="img-fluid w-75 logo"
               data-bs-toggle="tooltip" data-bs-placement="bottom" title="Windows Subsystem For Linux"
@@ -452,8 +452,10 @@
               'windows-subsystem-for-linux.png', `<b>WSL</b> en Windows, introduce una capa intermedia que funciona con un núcleo de Linux real (kernel) y en el que se pueden instalar distribuciones de GNU/Linux como por ejemplo Ubuntu, Debian, Kali o incluso la distribución minimalista Alpine.<br><i class='fas fa-linux fa-1x'></i>`);">
           </div>
         </div>
+      </div>
+      <div class="row">
         <!-- WEB DEVELOPMENT -->
-        <div class="col-12 col-md-3 col-lg-6 mx-auto">
+        <div class="col-12 col-md-6 col-lg-6 mx-auto mb-3">
           <div class="card px-3 py-3">
             <div class="card-header">
               <h2 class="text-center">DESARROLLO WEB</h2>
@@ -505,7 +507,7 @@
           </div>
         </div>
         <!-- FRAMEWORKS WEB -->
-        <div class="col-12 col-md-3 col-lg-6 mx-auto mt-3">
+        <div class="col-12 col-md-6 col-lg-6 mx-auto">
           <div class="card px-3 py-3">
             <div class="card-header">
               <h2 class="text-center">FRAMEWORKS FRONTEND</h2>
@@ -565,7 +567,8 @@
     <p class="text-center py-2 fs-4 my-auto">&#xa9; EniDev911 2022</p>
   </footer>
   <!-- music -->
-  <div id="sound" class="fixed-bottom text-center"></div>
+  <div id="sound" class="fixed-bottom text-center" hidden></div>
+
 
 
   <!-- Libs and scripts -->
